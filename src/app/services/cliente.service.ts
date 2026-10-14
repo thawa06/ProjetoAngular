@@ -25,7 +25,17 @@ export class ClienteService {
       dataNascimento: "2007-05-06",
       email: "luiza002@gmail.com",
       cpf: "12241214412"
-    }
+    },
+
+    { id: 3,
+      nome: "Edson",
+      sobrenome: "Pelé",
+      dataNascimento: "1934-05-06",
+      email: "pele10oreidosantos@gmail.com",
+      cpf: "180025523312"
+    },
+
+
   
   ]
 
