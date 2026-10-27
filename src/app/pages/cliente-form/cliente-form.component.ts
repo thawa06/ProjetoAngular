@@ -4,6 +4,8 @@ import { Cliente } from '../../model/cliente';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ClienteService } from '../../services/cliente.service';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cliente-form',
@@ -21,6 +23,20 @@ export class ClienteFormComponent {
   salvar() {
 
     if (this.cliente.senha !== this.confirmarSenha) {
+
+  cliente = {
+    cpf: '',
+    nome: '',
+    sobrenome: '',
+    dataNascimento: '',
+    email: '',
+    senha: '',
+    confirmarSenha: ''
+  };
+
+  cadastrar() {
+
+    if (this.cliente.senha !== this.cliente.confirmarSenha) {
       alert('As senhas não são iguais.');
       return;
     }
@@ -34,4 +50,9 @@ export class ClienteFormComponent {
     })
 
   }//Fim do salvar
+    alert(`Cliente ${this.cliente.nome} cadastrado com sucesso!`);
+
+    console.log(this.cliente);
+
+  }
 }

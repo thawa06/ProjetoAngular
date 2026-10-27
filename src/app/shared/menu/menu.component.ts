@@ -13,6 +13,8 @@ export class MenuComponent {
     { label: 'Inicio', link: '' },
     { label: 'Cadastre-se', link: '/cliente-cadastro' },
     { label: 'Contas', link: '/contas' },
-    { label: 'Sobre', link: '/sobre' }
+    { label: 'Sobre', link: '/sobre' },
+    { label: 'Ajuda', link: '/ajuda' },
+    
   ] 
 }
