@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-admin-clientes',
   standalone: true,
   imports: [RouterLink],
+  imports: [],
   templateUrl: './admin-clientes.component.html',
   styleUrl: './admin-clientes.component.css'
 })
@@ -34,3 +35,22 @@ export class AdminClientesComponent implements OnInit {
     })
   }
 }
+
+  private service = inject(ClienteService);
+  listaClientes: Cliente[] = [];
+
+  ngOnInit(): void {
+    this.listaClientes = this.service.listar();
+  }
+
+   editar(id: number) {
+    console.log('Editar cliente:', id);
+  }
+
+  excluir(id: number) {
+    console.log('Excluir cliente:', id);
+  }
+
+}
+
+

@@ -16,6 +16,8 @@ export class LoginComponent {
   login: string = "";
   senha: string = "";
   botaoDesabilitado: boolean = true;
+  
+  constructor(private router: Router) {}
 
   //Valido se os campos foram preenchidos para habilitar o botão de login
   validarFormulario() {
@@ -28,12 +30,15 @@ export class LoginComponent {
 
   //Verifico se o usuário e senha são válidos
   fazerLogin() {
-    if (this.login === 'admin@email.com' && this.senha === '123') {
+    if (this.login === 'admin@gmail.com' && this.senha === '123') {
       alert(`Bem-vindo ${this.login}!`);
       this.router.navigate(['/admin-clientes-listar']);
+
+      this.router.navigate(['/Admin']);
     } else {
       alert('Dados inválidos');
     }
   }
+
 
 }
